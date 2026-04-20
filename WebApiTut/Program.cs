@@ -1,23 +1,76 @@
+// Note : this line like start the project engine
 var builder = WebApplication.CreateBuilder(args);
 
+
+// Note : this line like enable the controller
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
+// Add Swagger services
+// Note : this line saying to descover all api endpoints
+builder.Services.AddEndpointsApiExplorer();
+// Note : This Create swagger doc or generate Api testing UI
+builder.Services.AddSwaggerGen();
+
+
+// Note : Everything is ready lets build the app
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Note : This create the Url ex. localhost5156/swagger
+// Configure Swagger middleware
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
+// Note :  this HTTPS redirection http://localhot
 app.UseHttpsRedirection();
 
+// Note : For Autherization or Security Check Security Rules
 app.UseAuthorization();
 
+// Note : Connect url to Ctrl method ex.api/todo (goes to ToDoController)
 app.MapControllers();
 
+//Note : application is Running server is live now
 app.Run();
+
+/*
+ - https://localhost:7093/swagger
+ - Swagger shows:
+                GET /api/todo
+                GET /api/todo/{id}
+ - User Clicks Execute on GET /api/todo
+                GET /api/todo
+ - Request Goes to ToDoController - Because of this:
+                [Route("api/[controller]")] and ctrl name
+ - [HttpGet] Method Executes This method runs:
+                public IActionResult GetAll() - because request is:
+                GET /api/todo
+ - Data is Read from List
+                private static List<ToDoItem> _toDoItems
+ - This line runs:
+                var toDoItemDTOs = _toDoItems.Select(item => MaToDoItemToDTO(item)).ToList();
+    Why DTO ?
+                Because we don’t want to expose full Model directly.
+                We send only required fields.
+ - Mapping Method Executes This method runs:
+                private ToDoItemDTO MaToDoItemToDTO(ToDoItem item)
+                It converts:
+                Model -> ToDoItem
+                        to
+                DTO -> ToDoItemDTO
+ - Response Sent Back
+                return Ok(toDoItemDTOs);
+                This sends:
+
+                [
+                  {
+                    "id": 1,
+                    "title": "Buy groceries",
+                    "completed": false
+                  }
+                ]
+ 
+ */
