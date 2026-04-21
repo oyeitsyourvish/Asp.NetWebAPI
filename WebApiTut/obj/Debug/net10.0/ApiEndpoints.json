@@ -11,6 +11,22 @@
   },
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
+    "Method": "CreateNewItem",
+    "RelativePath": "api/ToDo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newItemDTO",
+        "Type": "WebApiTut.DTO.ToDoItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "GetToDoItembyId",
     "RelativePath": "api/ToDo/{id}",
     "HttpMethod": "GET",

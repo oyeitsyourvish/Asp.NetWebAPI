@@ -5,7 +5,7 @@ using WebApiTut.Models;
 
 namespace WebApiTut.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[Action]")]
     [ApiController]
     public class ToDoController : ControllerBase
     {
@@ -57,6 +57,27 @@ namespace WebApiTut.Controllers
 
 
         }
+
+        [HttpPost]
+        public IActionResult CreateNewItem (ToDoItemDTO newItemDTO)
+        {
+            if (newItemDTO == null || string.IsNullOrEmpty(newItemDTO.Title))
+            {
+                // If the request body is null or the title is empty, return a 400 Bad Request response
+                return BadRequest("Invalid to-do item data.");
+            }
+            var newItem = new ToDoItem()
+            {
+                Id = _toDoItems.Count > 0 ? _toDoItems.Max(i => i.Id) + 1 : 1, // Generate a new ID
+                Title = newItemDTO.Title,
+                Completed = newItemDTO.Completed
+            };
+            _toDoItems.Add(newItem);
+            var createdItemDTO = MaToDoItemToDTO(newItem);
+            // Return a 201 Created response with the created item
+            return CreatedAtAction(nameof(GetToDoItembyId), new { id = createdItemDTO.Id }, createdItemDTO);
+        }
+
 
         // we are mapping the ToDoItem to ToDoItemDTO manually here, but in a real application, you
         // might want to use a library like AutoMapper for this purpose.
