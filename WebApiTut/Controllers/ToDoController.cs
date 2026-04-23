@@ -66,6 +66,12 @@ namespace WebApiTut.Controllers
                 // If the request body is null or the title is empty, return a 400 Bad Request response
                 return BadRequest("Invalid to-do item data.");
             }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var newItem = new ToDoItem()
             {
                 Id = _toDoItems.Count > 0 ? _toDoItems.Max(i => i.Id) + 1 : 1, // Generate a new ID

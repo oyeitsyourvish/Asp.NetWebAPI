@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/ToDo": {
+    "/api/ToDo/GetAll": {
       "get": {
         "tags": [
           "ToDo"
@@ -15,7 +15,32 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/ToDo/GetToDoItembyId/{id}": {
+      "get": {
+        "tags": [
+          "ToDo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ToDo/CreateNewItem": {
       "post": {
         "tags": [
           "ToDo"
@@ -39,29 +64,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/ToDo/{id}": {
-      "get": {
-        "tags": [
-          "ToDo"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -112,6 +114,9 @@
   "components": {
     "schemas": {
       "ToDoItemDTO": {
+        "required": [
+          "title"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -119,8 +124,8 @@
             "format": "int32"
           },
           "title": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "completed": {
             "type": "boolean"

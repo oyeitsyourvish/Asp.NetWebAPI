@@ -1,8 +1,13 @@
-﻿namespace WebApiTut.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApiTut.DTO
 {
     public class ToDoItemDTO
     {
         public int Id { get; set; }
+
+        // model Validation
+        [Required]
         public string Title { get; set; }
         public bool Completed { get; set; } = false;
     }

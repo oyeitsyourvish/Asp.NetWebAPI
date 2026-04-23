@@ -38,8 +38,7 @@
               "RelativeToolTip": "WebApiTut\\Program.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAADUAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:41:38.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T18:41:38.543Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "WebApiTut\\Models\\ToDoItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:33:44.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T18:33:44.093Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "WebApiTut\\DTO\\ToDoItemDTO.cs",
               "ToolTip": "E:\\Vishal CSharp\\WebApiTut\\WebApiTut\\DTO\\ToDoItemDTO.cs",
               "RelativeToolTip": "WebApiTut\\DTO\\ToDoItemDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T18:32:52.441Z",
               "EditorCaption": ""
@@ -75,7 +73,7 @@
               "RelativeDocumentMoniker": "WebApiTut\\Controllers\\ToDoController.cs",
               "ToolTip": "E:\\Vishal CSharp\\WebApiTut\\WebApiTut\\Controllers\\ToDoController.cs",
               "RelativeToolTip": "WebApiTut\\Controllers\\ToDoController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwAcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAwD4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T18:26:11.686Z",
               "EditorCaption": ""

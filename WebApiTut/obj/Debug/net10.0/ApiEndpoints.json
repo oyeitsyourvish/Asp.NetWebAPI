@@ -1,18 +1,8 @@
 [
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
-    "Method": "GetAll",
-    "RelativePath": "api/ToDo",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "CreateNewItem",
-    "RelativePath": "api/ToDo",
+    "RelativePath": "api/ToDo/CreateNewItem",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,8 +17,18 @@
   },
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
+    "Method": "GetAll",
+    "RelativePath": "api/ToDo/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "GetToDoItembyId",
-    "RelativePath": "api/ToDo/{id}",
+    "RelativePath": "api/ToDo/GetToDoItembyId/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
