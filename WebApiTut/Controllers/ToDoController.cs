@@ -5,7 +5,9 @@ using WebApiTut.Models;
 
 namespace WebApiTut.Controllers
 {
-    [Route("api/[controller]/[Action]")]
+    // this routing attribute defines the base route for all actions in this controller.
+    // The [Action] token allows you to specify the action name in the URL, making it more flexible for different endpoints.
+    [Route("api/[controller]")]  
     [ApiController]
     public class ToDoController : ControllerBase
     {
@@ -20,7 +22,16 @@ namespace WebApiTut.Controllers
 
 
         // GET api/todo
+        /*Way of Attribut Routing
+         [HttpGet("getAll")]
+        another way
+         [Route("getAll")]
+        another way
+         [Route("api/[controller]/[Action]")]   // in this case it atoumatically take action method name.
+         */
+
         [HttpGet]
+        [Route("GetAll")] // This route will be api/todo/GetAll
         public IActionResult GetAll()
         {
             if (_toDoItems.Count == 0)
@@ -37,7 +48,7 @@ namespace WebApiTut.Controllers
 
 
         // GET api/todo/1
-        [HttpGet("{id}")]
+        [HttpGet("SearchById /{id}")] // This route will be api/todo/SearchById/{id}
         public IActionResult GetToDoItembyId(int id)
         {
             if (_toDoItems.Count == 0)

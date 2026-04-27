@@ -19,6 +19,7 @@ E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.AssemblyInfo.cs
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.csproj.CoreCompileInputs.cache
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.MvcApplicationPartsAssemblyInfo.cs
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.MvcApplicationPartsAssemblyInfo.cache
+E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.sourcelink.json
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\rjimswa.dswa.cache.json
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -35,4 +36,3 @@ E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\refint\WebApiTut.dll
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.pdb
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.genruntimeconfig.cache
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\ref\WebApiTut.dll
-E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.sourcelink.json

@@ -2,7 +2,7 @@
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "CreateNewItem",
-    "RelativePath": "api/ToDo/CreateNewItem",
+    "RelativePath": "api/ToDo",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "GetToDoItembyId",
-    "RelativePath": "api/ToDo/GetToDoItembyId/{id}",
+    "RelativePath": "api/ToDo/SearchById /{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

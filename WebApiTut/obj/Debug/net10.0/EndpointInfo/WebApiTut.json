@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/ToDo/GetToDoItembyId/{id}": {
+    "/api/ToDo/SearchById /{id}": {
       "get": {
         "tags": [
           "ToDo"
@@ -40,7 +40,7 @@
         }
       }
     },
-    "/api/ToDo/CreateNewItem": {
+    "/api/ToDo": {
       "post": {
         "tags": [
           "ToDo"
