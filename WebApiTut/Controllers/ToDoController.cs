@@ -7,7 +7,7 @@ namespace WebApiTut.Controllers
 {
     // this routing attribute defines the base route for all actions in this controller.
     // The [Action] token allows you to specify the action name in the URL, making it more flexible for different endpoints.
-    [Route("api/[controller]")]  
+    [Route("api/[controller]")]
     [ApiController]
     public class ToDoController : ControllerBase
     {
@@ -70,7 +70,7 @@ namespace WebApiTut.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateNewItem (ToDoItemDTO newItemDTO)
+        public IActionResult CreateNewItem(ToDoItemDTO newItemDTO)
         {
             if (newItemDTO == null || string.IsNullOrEmpty(newItemDTO.Title))
             {
@@ -94,6 +94,36 @@ namespace WebApiTut.Controllers
             // Return a 201 Created response with the created item
             return CreatedAtAction(nameof(GetToDoItembyId), new { id = createdItemDTO.Id }, createdItemDTO);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateToDoItem(int id, [FromBody] ToDoItem UpdateToDoItem)
+        {
+            if (UpdateToDoItem == null)
+            {
+                return NotFound();
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var existingItem = _toDoItems.FirstOrDefault(i => i.Id == id);
+            if (existingItem == null)
+            {
+                NotFound();
+            }
+
+            // Update the existing item with the new values
+            existingItem.Title = UpdateToDoItem.Title;
+            existingItem.Completed = UpdateToDoItem.Completed;
+
+            // In a real application, you would typically save the updated item to a database here.
+            var updatedItemDTO = MaToDoItemToDTO(existingItem);
+
+            return Ok(updatedItemDTO);
+
+        }
+
+
 
 
         // we are mapping the ToDoItem to ToDoItemDTO manually here, but in a real application, you

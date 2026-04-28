@@ -17,6 +17,27 @@
   },
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
+    "Method": "UpdateToDoItem",
+    "RelativePath": "api/ToDo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "UpdateToDoItem",
+        "Type": "WebApiTut.Models.ToDoItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "GetAll",
     "RelativePath": "api/ToDo/GetAll",
     "HttpMethod": "GET",
