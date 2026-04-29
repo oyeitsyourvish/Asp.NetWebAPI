@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApiTut")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+580cc03f4ecb6cc251da8fde5730fe6ef3118a44")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2520b758b9d28be013c15fe6f53c4e5037de87ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApiTut")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApiTut")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

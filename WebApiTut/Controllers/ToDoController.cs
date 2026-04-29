@@ -147,8 +147,18 @@ namespace WebApiTut.Controllers
             return Ok(existingItem);
 
         }
-        
 
+        [HttpDelete("{id}")]
+        public IActionResult deleteToDoItem(int id)
+        {
+            var existingItem = _toDoItems.FirstOrDefault(i => i.Id == id);
+            if(existingItem == null)
+            {
+                return NotFound();
+            }
+            _toDoItems.Remove(existingItem);
+            return NoContent ();
+        }
 
 
         // we are mapping the ToDoItem to ToDoItemDTO manually here, but in a real application, you
