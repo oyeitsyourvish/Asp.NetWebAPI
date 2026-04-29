@@ -17,6 +17,27 @@
   },
   {
     "ContainingType": "WebApiTut.Controllers.ToDoController",
+    "Method": "patchDocument",
+    "RelativePath": "api/ToDo",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "patchDoc",
+        "Type": "Microsoft.AspNetCore.JsonPatch.JsonPatchDocument\u00601[[WebApiTut.Models.ToDoItem, WebApiTut, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiTut.Controllers.ToDoController",
     "Method": "UpdateToDoItem",
     "RelativePath": "api/ToDo/{id}",
     "HttpMethod": "PUT",

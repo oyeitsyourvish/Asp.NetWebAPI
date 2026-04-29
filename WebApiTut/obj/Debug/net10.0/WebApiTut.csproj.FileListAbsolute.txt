@@ -36,3 +36,5 @@ E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\refint\WebApiTut.dll
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.pdb
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\WebApiTut.genruntimeconfig.cache
 E:\Vishal CSharp\WebApiTut\WebApiTut\obj\Debug\net10.0\ref\WebApiTut.dll
+E:\Vishal CSharp\WebApiTut\WebApiTut\bin\Debug\net10.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Vishal CSharp\WebApiTut\WebApiTut\bin\Debug\net10.0\Newtonsoft.Json.dll

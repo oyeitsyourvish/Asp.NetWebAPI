@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.XPath;
 using WebApiTut.DTO;
 using WebApiTut.Models;
 
@@ -123,6 +125,29 @@ namespace WebApiTut.Controllers
 
         }
 
+        [HttpPatch("{id}")]
+        public IActionResult patchDocument(int id, [FromBody] JsonPatchDocument <ToDoItem> patchDoc)
+        {
+            // Check if the patch document is null
+            if (patchDoc == null)
+            {
+                return BadRequest();
+            }
+
+            //retrieve the existing item from the in-memory list based on the provided ID
+            var existingItem = _toDoItems.FirstOrDefault(i => i.Id == id);
+            if (existingItem == null)
+            {
+                return NotFound();
+            }
+
+            // Apply the patch document to the existing item.
+            // This will modify the existing item based on the operations defined in the patch document.
+            patchDoc.ApplyTo(existingItem);
+            return Ok(existingItem);
+
+        }
+        
 
 
 
