@@ -1,4 +1,6 @@
 // Note : this line like start the project engine
+using WebApiTut.CustomMV;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -16,6 +18,10 @@ builder.Services.AddSwaggerGen();
 // Note : Everything is ready lets build the app
 var app = builder.Build();
 
+//Adding Custom Middleware in Request Processing Pipeline
+app.UseMiddleware<Logging>(); // Custom Middleware 
+
+
 // Note : This create the Url ex. localhost5156/swagger
 // Configure Swagger middleware
 if (app.Environment.IsDevelopment())
@@ -24,14 +30,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles(); //Built-in Middileware - Non-terminal middleware.
+
 // Note :  this HTTPS redirection http://localhot
-app.UseHttpsRedirection();
+app.UseHttpsRedirection(); // Built-in Middileware - terminal middleware.
 
 // Note : For Autherization or Security Check Security Rules
-app.UseAuthorization();
+app.UseAuthorization(); //Built-in Middileware - Non-terminal middleware.
 
 // Note : Connect url to Ctrl method ex.api/todo (goes to ToDoController)
-app.MapControllers();
+app.MapControllers(); //Built-in Middileware - Terminal middleware.
 
 //Note : application is Running server is live now
 app.Run();
